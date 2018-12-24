@@ -1,8 +1,6 @@
 #ifndef MEMPOOLCONF_H
 #define MEMPOOLCONF_H
-#include "uipethernet-conf.h"
 extern "C" {
-  #include "uipopt.h"
   #include "Enc424J600.h"
 }
 #include <inttypes.h>

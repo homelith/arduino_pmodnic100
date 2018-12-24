@@ -17,9 +17,9 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "mempool.h"
 #include <string.h>
-#include "Arduino.h"
+#include <Arduino.h>
+#include "mempool.h"
 #define POOLOFFSET 1
 
 struct memblock MemoryPool::blocks[MEMPOOL_NUM_MEMBLOCKS+1];
