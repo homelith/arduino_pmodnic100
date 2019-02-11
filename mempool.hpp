@@ -25,30 +25,30 @@
 #define POOLSTART 0
 #define NOBLOCK 0
 
-#include "mempool_conf.h"
+#include "mempool_conf.hpp"
 
 struct memblock
 {
-  memaddress begin;
-  memaddress size;
-  memhandle nextblock;
+	memaddress begin;
+	memaddress size;
+	memhandle nextblock;
 };
 
 class MemoryPool
 {
-#ifdef MEMPOOLTEST_H
-  friend class MemoryPoolTest;
-#endif
+	#ifdef MEMPOOLTEST_H
+		friend class MemoryPoolTest;
+	#endif
 
-protected:
-  static struct memblock blocks[MEMPOOL_NUM_MEMBLOCKS+1];
+	protected:
+	static struct memblock blocks[MEMPOOL_NUM_MEMBLOCKS+1];
 
-public:
-  static void init();
-  static memhandle allocBlock(memaddress);
-  static void freeBlock(memhandle);
-  static void resizeBlock(memhandle handle, memaddress position);
-  static void resizeBlock(memhandle handle, memaddress position, memaddress size);
-  static memaddress blockSize(memhandle);
+	public:
+	static void init();
+	static memhandle allocBlock(memaddress);
+	static void freeBlock(memhandle);
+	static void resizeBlock(memhandle handle, memaddress position);
+	static void resizeBlock(memhandle handle, memaddress position, memaddress size);
+	static memaddress blockSize(memhandle);
 };
 #endif

@@ -25,16 +25,16 @@
 #ifndef Enc424J600Network_H_
 #define Enc424J600Network_H_
 
-#include "mempool.h"
+#include "mempool.hpp"
 
 // In Arduino UNO, Digital pin 13 (SCK), pin 12 (MISO), and pin 11 (MOSI) are fixed assignment.
 // ChipSelect pin can be user defined below
-#define ENC28J60_CONTROL_CS 10
+#define ENC424J600_CONTROL_CS 10
 
-#define UIP_RECEIVEBUFFERHANDLE 0xff
+#define RECEIVEBUFFERHANDLE 0xff
 
-//#define ENC28J60DEBUG 1
-//#define DEBUGSERIAL Serial
+//#define ENC424J60DEBUG 1
+#define DEBUGSERIAL Serial
 
 class Enc424J600Network : public MemoryPool
 {
