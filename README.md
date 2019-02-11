@@ -30,5 +30,5 @@ you need 5V <-> 3V3 bi-directional logic level converter or a simple voltage div
 ```
 
 - open arduino_pmodnic100.ino, compile, and run from arduino IDE.
-- PMOD NIC100 throws a ping packet from 192.168.100.2 (00:01:02:03:04:05) to 192.168.100.2 (ff:ff:ff:ff:ff:ff) every 5 seconds. (with no care about checksum)
+- PMOD NIC100 throws a ping packet from 192.168.100.2 (00:01:02:03:04:05) to 192.168.100.1 (ff:ff:ff:ff:ff:ff) every 5 seconds. (with no care about checksum)
 - Any packet received will dumped to Arduino serial console.
